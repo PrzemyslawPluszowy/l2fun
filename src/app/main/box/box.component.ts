@@ -32,9 +32,4 @@ import { BoxServicesService } from './services/box-services.service';
 export class BoxComponent {
   constructor(private boxServices: BoxServicesService) {}
   onHover: boolean = false;
-  // ngOnInit(): void {
-  //   this.boxServices.dataHoverUpdate.subscribe((data) => {
-  //     this.onHover = data;
-  //   });
-  // }
 }

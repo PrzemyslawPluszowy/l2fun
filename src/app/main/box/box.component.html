@@ -1,39 +1,20 @@
-<ng-container>
+<div class="wrapper" (mouseenter)="onHover = true" (mouseleave)="onHover = false">
+    <div class="wrapforanimation" *ngIf="onHover" appSquareDirective></div>
+    <div class="box">
+        <ng-container [ngSwitch]="onHover">
 
-    <div class="wrapper" (mouseenter)="onHover = true" (mouseleave)="onHover = false">
-        <div class="wrapforanimation" *ngIf="onHover" appSquareDirective></div>
-        <div class=" box" [ngSwitch]="onHover">
+            <ng-container [@enterTrigger]="'fadeIn'" *ngSwitchDefault>
+
+                <ng-content select=".box--fullHidden" [@enterTrigger]="'fadeIn'"></ng-content>
+
+            </ng-container>
             <ng-container *ngSwitchCase="true">
-                <ng-content select="cardOff"></ng-content>
-                <div class="box--full" [@enterTrigger]="'fadeIn'">
-                    <div class="box--full--ashe" appBoxInsideAnimation>
-                        <img src="../../../assets/img/box/ashe.png" alt="">
-                    </div>
-                    <div class="box--full--desc">
-                        <h1>Legue OF Legend</h1>
-                        <p>Play on Eu servers</p>
-                    </div>
-                </div>
+                <ng-content select=".box--full" [@enterTrigger]="'fadeIn'"></ng-content>
+
             </ng-container>
-            <ng-container *ngSwitchCase="false">
-                <div class="box--fullHidden" [@enterTrigger]="'fadeIn'">
-                    <div class="box--fullHidden--upper">
-                        <img src="../../../assets/img/box/ashe-purple.jpg" alt="haimerdinger">
-                    </div>
+        </ng-container>
 
-                    <div class="box--fullHidden--bottom">
-                        <h1>Legue OF Legend</h1>
-                        <p>Play on Eu servers</p>
 
-                    </div>
-                </div>
-            </ng-container>
 
-        </div>
     </div>
-</ng-container>
-
-<!-- <img src="../../../assets/img/box/Heimer.webp" alt="haimerdinger"> -->
-
-<!-- appSquareDirective="onHover -->
-<!-- appBoxDirective -->
+</div>

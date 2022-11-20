@@ -1,7 +1,29 @@
 <div class="wrap">
-    <app-box></app-box>
-    <app-box></app-box>
 
-    <app-box></app-box>
+    <app-box [@enterTrigger]="'fadeIn'" *ngFor="let game of boxesGame">
+
+
+        <div class="box--fullHidden">
+            <div class="box--fullHidden--upper">
+                <img [src]="game.img" alt="haimerdinger">
+            </div>
+
+            <div class="box--fullHidden--bottom">
+                <h1>{{game.title}}</h1>
+                <p>{{game.desc}}</p>
+
+            </div>
+        </div>
+        <div show class="box--full" [@enterTrigger]="'fadeIn'">
+            <div class="box--full--ashe" appBoxInsideAnimation>
+                <img [src]="game.imgOnHover" alt="">
+            </div>
+            <div class="box--full--desc">
+                <h1>{{game.title}}</h1>
+                <p>{{game.desc}}</p>
+            </div>
+        </div>
+    </app-box>
+
 
 </div>

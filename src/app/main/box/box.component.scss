@@ -10,101 +10,8 @@
   height: 400px;
   display: flex;
   background-color: rgba(40, 58, 93, 0.44);
-
-  .box--full {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    z-index: 1;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: rgb(16, 158, 224);
-
-    // background: linear-gradient(
-    //   0deg,
-    //   rgba(16, 158, 224, 1) 0%,
-    //   rgb(29, 129, 175) 15%,
-    //   rgb(119, 255, 133) 60%,
-    //   rgba(119, 200, 255, 1)
-    // );
-    border: 2px solid white;
-    border-radius: 0px;
-    .box--full--ashe {
-      position: absolute;
-      top: 0px;
-      right: -50px;
-      width: 100%;
-      height: 100%;
-      img {
-        width: 150%;
-      }
-    }
-
-    .box--full--desc {
-      padding-bottom: 20px;
-      p {
-        color: white;
-      }
-    }
-  }
 }
 
-.box--fullHidden {
-  z-index: 5;
-  width: 100%;
-  height: 100%;
-  .box--fullHidden--upper {
-    position: relative;
-    height: 75%;
-    width: 100%;
-    background-color: #2e3255;
-    border-top: 3px rgba(0, 0, 0, 0.279) solid;
-    border-left: 3px rgba(0, 0, 0, 0.237) solid;
-    border-right: 3px rgba(0, 0, 0, 0.349) solid;
-    border-radius: 5px 5px;
-    img {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      object-fit: cover;
-    }
-  }
-  .box--fullHidden--bottom {
-    position: relative;
-    height: 25%;
-    width: 100%;
-    background-color: whitesmoke;
-
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 5px;
-    border-bottom: 3px rgba(0, 0, 0, 0.279) solid;
-    border-left: 3px rgba(0, 0, 0, 0.237) solid;
-    border-right: 3px rgba(0, 0, 0, 0.349) solid;
-    border-radius: 0px 0px 5px 5px;
-  }
-}
-h1 {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-p {
-  text-align: center;
-  color: rgb(100, 100, 100);
-  display: block;
-  justify-self: flex-end;
-  font-weight: 400;
-}
-
-.animate-Hero {
-  animation: ashe 1s ease-out;
-  animation-fill-mode: forwards;
-}
 .wrapper {
   position: relative;
   margin-right: 20px;
@@ -120,21 +27,6 @@ p {
   }
 }
 
-@keyframes ashe {
-  0% {
-    width: 100%;
-    height: 100%;
-  }
-  50% {
-    width: 100%;
-    height: 100%;
-  }
-
-  100% {
-    width: 150%;
-    height: 150%;
-  }
-}
 @keyframes SquareTop {
   0% {
     opacity: 0.7;
