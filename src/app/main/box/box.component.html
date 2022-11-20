@@ -3,13 +3,13 @@
     <div class="box">
         <ng-container [ngSwitch]="onHover">
 
-            <ng-container [@enterTrigger]="'fadeIn'" *ngSwitchDefault>
+            <ng-container *ngSwitchDefault>
 
-                <ng-content select=".box--fullHidden" [@enterTrigger]="'fadeIn'"></ng-content>
+                <ng-content select=".box--fullHidden"></ng-content>
 
             </ng-container>
             <ng-container *ngSwitchCase="true">
-                <ng-content select=".box--full" [@enterTrigger]="'fadeIn'"></ng-content>
+                <ng-content select=".box--full"></ng-content>
 
             </ng-container>
         </ng-container>

@@ -16,6 +16,7 @@
   height: 100%;
   overflow: hidden;
   background: rgb(16, 158, 224);
+  text-align: center;
 
   border: 2px solid white;
   border-radius: 0px;
@@ -33,17 +34,19 @@
   .box--full--desc {
     padding-bottom: 20px;
     p {
-      color: white;
+      text-align: center;
+      color: rgb(255, 255, 255);
     }
   }
 }
+
 .animate-Hero {
   animation: ashe 1s ease-out;
   animation-fill-mode: forwards;
 }
 
 .box--fullHidden {
-  z-index: 5;
+  z-index: 10;
   width: 100%;
   height: 100%;
   .box--fullHidden--upper {
@@ -63,6 +66,7 @@
     }
   }
   .box--fullHidden--bottom {
+    z-index: 10;
     position: relative;
     height: 25%;
     width: 100%;

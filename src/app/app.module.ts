@@ -11,6 +11,7 @@ import { BoxComponent } from './main/box/box.component';
 import { BoxDirectiveDirective } from './directive/box-directive.directive';
 import { BoxInsideAnimationDirective } from './directive/box-inside-animation.directive';
 import { BoxServicesService } from './main/box/services/box-services.service';
+import { BgDirective } from './directive/bg.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BoxServicesService } from './main/box/services/box-services.service';
     BoxComponent,
     BoxDirectiveDirective,
     BoxInsideAnimationDirective,
+    BgDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

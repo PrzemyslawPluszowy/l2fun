@@ -57,14 +57,18 @@ export class BoxDirectiveDirective implements AfterViewInit, OnDestroy {
   height: ${randomXYSquare}px;
   top:0px;
   left: ${randomXPos - randomXYSquare}px;
+  
   animation: SquareTop 2s;
+  z-index: 0;
 `;
       divLeft.style.cssText = `
 width: ${randomXYSquare}px; 
 height: ${randomXYSquare}px;
 left: 0px;
 top:${randomYPos}px;
+
 animation: SquareLeft 2s;
+z-index: 0;
 `;
 
       divBottom.style.cssText = `
@@ -73,14 +77,18 @@ width: ${randomXYSquare}px;
 height: ${randomXYSquare}px;
 left: ${randomXPos - randomXYSquare}px;
 bottom: 0px;
+
 animation: SquareBottom 2s;
+z-index: 0;
 `;
       divRight.style.cssText = `
 width: ${randomXYSquare}px; 
   height: ${randomXYSquare}px;
   right: 0px;
   top:${randomYPos}px;
+  
   animation: SquareRight 2s;
+  z-index: 0;
 `;
 
       this.renderer.addClass(divTop, 'outside-animation');
