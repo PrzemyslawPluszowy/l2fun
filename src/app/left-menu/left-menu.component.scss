@@ -1,7 +1,27 @@
+ul {
+  display: flex;
+  flex-direction: column;
+}
 li {
-  padding-top: 30px;
-  line-height: 50px;
+  display: block;
+
+  font-size: 50px;
+  padding: 30px;
+  line-height: 90px;
+  position: relative;
 }
 a {
+  width: auto;
+  display: block;
   font-size: 90px;
+}
+.square-li-animation {
+  // width: 20px;
+  // height: 20px;
+  // position: absolute;
+  // top: 50%;
+  // left: -50px;
+  // transform: translateY(-50%);
+
+  // background-color: rgba(126, 176, 219, 0.498);
 }

@@ -12,6 +12,9 @@ import { BoxDirectiveDirective } from './directive/box-directive.directive';
 import { BoxInsideAnimationDirective } from './directive/box-inside-animation.directive';
 import { BoxServicesService } from './main/box/services/box-services.service';
 import { BgDirective } from './directive/bg.directive';
+import { LiMenuDirective } from './directive/li-menu.directive';
+import { MembersComponent } from './members/members.component';
+import { SpotComponent } from './spot/spot.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { BgDirective } from './directive/bg.directive';
     BoxDirectiveDirective,
     BoxInsideAnimationDirective,
     BgDirective,
+    LiMenuDirective,
+    MembersComponent,
+    SpotComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

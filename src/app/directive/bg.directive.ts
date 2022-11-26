@@ -26,7 +26,6 @@ export class BgDirective {
       );
       const widthObjectAnimation = this.elRef.nativeElement.clientWidth;
       const heightObjectAnimation = this.elRef.nativeElement.clientHeight;
-      console.log(speedSquare);
       const randomXYSquare = Math.floor(
         Math.random() * (this.maxBoxSize - this.minBoxSize - 1) +
           this.minBoxSize
