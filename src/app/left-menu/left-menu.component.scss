@@ -9,19 +9,17 @@ li {
   padding: 30px;
   line-height: 90px;
   position: relative;
+  z-index: 2;
 }
 a {
   width: auto;
   display: block;
   font-size: 90px;
+  z-index: 2;
 }
 .square-li-animation {
-  // width: 20px;
-  // height: 20px;
-  // position: absolute;
-  // top: 50%;
-  // left: -50px;
-  // transform: translateY(-50%);
-
-  // background-color: rgba(126, 176, 219, 0.498);
+  //add in js
+}
+.directiveStart {
+  color: red;
 }
