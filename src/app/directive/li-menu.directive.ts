@@ -17,6 +17,9 @@ export class LiMenuDirective implements OnChanges {
       this.createSquare();
     } else {
       clearInterval(this.interval1);
+      this.elRef.nativeElement.style.cssText = `
+    
+     text-shadow: none`;
     }
   }
 

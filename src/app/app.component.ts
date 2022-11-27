@@ -7,7 +7,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AppComponent {
   title = 'husaria';
-  mobile: boolean = false;
+  mobile: boolean = true;
   @HostListener('window:resize', [])
   onResize() {
     let width = window.innerWidth;

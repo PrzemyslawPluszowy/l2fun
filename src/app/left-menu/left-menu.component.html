@@ -1,12 +1,14 @@
 <div class="wrap">
     <ul>
-        <li><a routerLink="/game" routerLinkActive="active" #rla="routerLinkActive" [appAnim]="rla.isActive">Games
+        <li><a routerLink="/game" routerLinkActive="active" #rla="routerLinkActive" (click)="recive('Games')"
+                [appAnim]="rla.isActive">Games
             </a></li>
 
 
-        <li><a routerLink="/members" routerLinkActive="active" #rla2="routerLinkActive"
-                [appAnim]="rla2.isActive">Members</a></li>
-        <li><a routerLink="/spot" routerLinkActive="active" #rla3="routerLinkActive" [appAnim]="rla3.isActive">Spot</a>
+        <li><a routerLink="/members" routerLinkActive="active" #rla2="routerLinkActive" [appAnim]="rla2.isActive"
+                (click)="recive('Members')">Members</a></li>
+        <li><a routerLink="/spot" routerLinkActive="active" #rla3="routerLinkActive" [appAnim]="rla3.isActive"
+                (click)="recive('Spot')">Spot</a>
         </li>
 
     </ul>

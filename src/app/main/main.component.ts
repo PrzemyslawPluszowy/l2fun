@@ -6,7 +6,6 @@ import {
   trigger,
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { BoxServicesService } from './box/services/box-services.service';
 
 @Component({
