@@ -32,7 +32,9 @@ export class LiMenuDirective implements AfterViewInit, AfterViewChecked {
   direction: number = 0;
   interval: any;
   intervalDirection: any;
-  constructor(private renderer: Renderer2, private elRef: ElementRef) {}
+  constructor(private renderer: Renderer2, private elRef: ElementRef) {
+    this.liSphareAnimation();
+  }
 
   createSquare() {
     setInterval(() => {
