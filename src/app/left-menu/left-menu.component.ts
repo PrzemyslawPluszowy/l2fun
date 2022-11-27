@@ -11,12 +11,8 @@ import {
   templateUrl: './left-menu.component.html',
   styleUrls: ['./left-menu.component.scss'],
 })
-export class LeftMenuComponent implements OnInit, AfterViewInit {
-  @ViewChild('on') one!: ElementRef;
-  onHover: boolean = false;
+export class LeftMenuComponent implements OnInit {
   constructor() {}
-  ngAfterViewInit() {
-    console.log(this.one);
-  }
+
   ngOnInit(): void {}
 }
