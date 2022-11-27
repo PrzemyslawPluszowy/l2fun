@@ -1,10 +1,10 @@
 <div class="wrap">
     <ul>
-        <li><a routerLink="/game" routerLinkActive="active" #rla="routerLinkActive" appAnim>Members
+        <li><a routerLink="/game" routerLinkActive="active" #rla="routerLinkActive" [appAnim]="rla.isActive">Members
             </a></li>
 
 
-        <li><a routerLink="/members" appAnim>Members</a></li>
+        <li><a routerLink="/members">Members</a></li>
         <li><a routerLink="/spot">Spot</a></li>
 
     </ul>

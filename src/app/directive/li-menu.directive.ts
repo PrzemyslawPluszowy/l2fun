@@ -7,21 +7,31 @@ import {
   HostListener,
   OnInit,
   AfterViewInit,
+  AfterViewChecked,
 } from '@angular/core';
 
 @Directive({
   selector: '[appAnim]',
 })
-export class LiMenuDirective {
-  @HostListener('click', ['$event']) onClick($event: ElementRef) {
-    this.liSphareAnimation();
-    // this.createSquare();
+export class LiMenuDirective implements AfterViewInit, AfterViewChecked {
+  @Input() appAnim!: boolean;
+  ngAfterViewInit() {
+    console.log(this.appAnim);
   }
+  ngAfterViewChecked() {
+    console.log(this.appAnim);
+  }
+  // if (this.appAnim) {
+  //   this.liSphareAnimation();
+  // } else {
+  //   clearInterval(this.intervalDirection);
+  //   clearInterval(this.interval);
+  // }
 
   widthRandom: number = 400;
   direction: number = 0;
   interval: any;
-
+  intervalDirection: any;
   constructor(private renderer: Renderer2, private elRef: ElementRef) {}
 
   createSquare() {
@@ -49,7 +59,7 @@ export class LiMenuDirective {
   liSphareAnimation() {
     const squareBig = this.renderer.createElement('div');
     this.renderer.appendChild(this.elRef.nativeElement, squareBig);
-    setInterval(() => {
+    this.intervalDirection = setInterval(() => {
       switch (this.direction) {
         case 0:
           this.widthRandom++;
@@ -83,7 +93,7 @@ background: linear-gradient(39deg, rgba(133,173,204,0.7) 0%, rgba(5,140,253,0.07
 `;
     }, 30);
 
-    setInterval(() => {
+    this.interval = setInterval(() => {
       const randomHeight = Math.floor(Math.random() * (60 - 40 + 1) + 40);
       const square = this.renderer.createElement('div');
 
