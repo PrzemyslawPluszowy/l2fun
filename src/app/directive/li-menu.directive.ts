@@ -5,10 +5,12 @@ import {
   ViewChild,
   Input,
   HostListener,
+  OnInit,
+  AfterViewInit,
 } from '@angular/core';
 
 @Directive({
-  selector: '[appLiMenu]',
+  selector: '[appAnim]',
 })
 export class LiMenuDirective {
   @HostListener('click', ['$event']) onClick($event: ElementRef) {
@@ -21,6 +23,7 @@ export class LiMenuDirective {
   interval: any;
 
   constructor(private renderer: Renderer2, private elRef: ElementRef) {}
+
   createSquare() {
     setInterval(() => {
       const randomXYSquare = Math.floor(Math.random() * (80 - 20 - 1) + 20);
