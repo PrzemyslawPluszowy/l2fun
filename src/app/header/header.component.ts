@@ -8,7 +8,5 @@ import { BoxServicesService } from './../main/box/services/box-services.service'
 })
 export class HeaderComponent implements OnInit {
   constructor(public boxServicesService: BoxServicesService) {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 }

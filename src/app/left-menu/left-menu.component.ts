@@ -1,7 +1,6 @@
 import { BoxServicesService } from '../main/box/services/box-services.service';
 
-import { Component, OnChanges, OnInit, EventEmitter } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Component, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-left-menu',

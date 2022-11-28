@@ -15,6 +15,7 @@ import { BgDirective } from './directive/bg.directive';
 import { LiMenuDirective } from './directive/li-menu.directive';
 import { MembersComponent } from './members/members.component';
 import { SpotComponent } from './spot/spot.component';
+import { TodayGameComponent } from './today-game/today-game.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SpotComponent } from './spot/spot.component';
     LiMenuDirective,
     MembersComponent,
     SpotComponent,
+    TodayGameComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
