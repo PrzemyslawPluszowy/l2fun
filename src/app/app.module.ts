@@ -16,6 +16,7 @@ import { LiMenuDirective } from './directive/li-menu.directive';
 import { MembersComponent } from './members/members.component';
 import { SpotComponent } from './spot/spot.component';
 import { TodayGameComponent } from './today-game/today-game.component';
+import { ShuffleDirective } from './directive/shuffle.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { TodayGameComponent } from './today-game/today-game.component';
     MembersComponent,
     SpotComponent,
     TodayGameComponent,
+    ShuffleDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
