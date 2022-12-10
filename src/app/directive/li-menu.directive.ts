@@ -30,7 +30,10 @@ export class LiMenuDirective implements OnChanges {
   createSquare() {
     this.elRef.nativeElement.style.cssText = `
     
-     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);`;
+     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+
+     text-decoration: underline 2px;
+     text-underline-offset: 8px;`;
 
     this.interval1 = setInterval(() => {
       const randomYPos = Math.floor(Math.random() * 95);

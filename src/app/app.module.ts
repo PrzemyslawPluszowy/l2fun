@@ -17,6 +17,7 @@ import { MembersComponent } from './members/members.component';
 import { SpotComponent } from './spot/spot.component';
 import { TodayGameComponent } from './today-game/today-game.component';
 import { ShuffleDirective } from './directive/shuffle.directive';
+import { TypeWritingDirective } from './directive/type-writing.directive';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ShuffleDirective } from './directive/shuffle.directive';
     SpotComponent,
     TodayGameComponent,
     ShuffleDirective,
+    TypeWritingDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

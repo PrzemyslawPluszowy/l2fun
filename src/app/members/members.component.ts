@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-members',
@@ -9,15 +10,4 @@ export class MembersComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  members = ['Siwy', 'Endrju', 'Omen', 'Enespo'];
-  rendermembers(){
-     this.members.forEach((member => {
-      let memberString:string = member
-     memberString.forEach(element => {
-      console.log(element)
-     });
-     });
-
-  }
- 
 }
