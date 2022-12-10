@@ -8,7 +8,6 @@ import {
 
 @Directive({
   selector: '[appSquareDirective]',
-  // exportAs: 'changeTemplate',
 })
 export class BoxDirectiveDirective implements AfterViewInit, OnDestroy {
   constructor(private elRef: ElementRef, private renderer: Renderer2) {}
@@ -105,6 +104,6 @@ width: ${randomXYSquare}px;
         this.renderer.removeChild(this.elRef.nativeElement, divRight);
         this.renderer.removeChild(this.elRef.nativeElement, divBottom);
       }, 1000);
-    }, 100);
+    }, 200);
   }
 }

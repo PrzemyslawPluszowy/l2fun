@@ -1,30 +1,22 @@
-import {
-  Directive,
-  ElementRef,
-  Renderer2,
-  OnInit,
-  AfterViewInit,
-  AfterViewChecked,
-  HostListener,
-} from '@angular/core';
+import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appShuffle]',
 })
 export class ShuffleDirective {
   constructor(private elRef: ElementRef, private render: Renderer2) {
-    // this.elRef.nativeElement.style.cssText = `
-    //   top: ${this.shufflePositionTop}px;
-    // filter: grayscale(1);
-    // `;
-    // this.addModal();
     this.createElmToAnimation();
   }
   @HostListener('click') click() {
-    // this.reset();
-    this.startShuffle();
-    this.heightSingleCard = this.elRef.nativeElement.clientHeight;
-    this.heightAllCard = this.elRef.nativeElement.nextSibling.height;
+    if (this.fireBlock) {
+      this.fireBlock = false;
+      this.reset();
+      this.startShuffle();
+      this.heightSingleCard = this.elRef.nativeElement.clientHeight;
+      this.heightAllCard = this.elRef.nativeElement.nextSibling.height;
+    } else {
+      console.log('block');
+    }
   }
 
   //config
@@ -35,21 +27,30 @@ export class ShuffleDirective {
   shufleInterval: any;
   slowDownInterval: any;
   checkPosition: any;
-  img: any;
+  img!: HTMLBRElement;
+  nextShufleSpan!: HTMLElement;
+  fireBlock = true;
+
   heightSingleCard: number = 0;
   heightAllCard = parseInt(this.elRef.nativeElement.height);
 
   shufflePositionTop: number = 0;
   randomCard = 0;
 
-  // addModal() {
-  //   const div = this.render.createElement('div');
-  //   div.classList.add('active');
-  //   this.render.appendChild(this.elRef.nativeElement.nextSibling.parentElement, div);
-  // }
-
+  subtitleShuffleAgain() {
+    this.nextShufleSpan = this.render.createElement('span');
+    const texShufle = this.render.createText('Shuffle Again');
+    this.render.addClass(this.nextShufleSpan, 'subtitle');
+    this.render.appendChild(this.nextShufleSpan, texShufle);
+    this.render.addClass(this.nextShufleSpan, 'hoverNext');
+    this.render.appendChild(
+      this.elRef.nativeElement.parentElement,
+      this.nextShufleSpan
+    );
+  }
   createElmToAnimation() {
     this.img = this.render.createElement('img');
+    this.nextShufleSpan = this.render.createElement('span');
     this.render.setAttribute(
       this.img,
       'src',
@@ -62,15 +63,11 @@ export class ShuffleDirective {
     clearInterval(this.shufleInterval);
     clearInterval(this.checkPosition);
     clearInterval(this.slowDownInterval);
+    this.render.removeChild(this.elRef.nativeElement, this.nextShufleSpan);
     this.heightSingleCard = 0;
     this.shufflePositionTop = 0;
     this.speedShuffle = 10;
     this.heightAllCard = parseInt(this.elRef.nativeElement.clientHeight);
-    this.elRef.nativeElement.style.cssText = `
-     
-      filter: blur(0px);
-    
-    `;
   }
 
   stopShuffle() {
@@ -81,16 +78,25 @@ export class ShuffleDirective {
         this.shufflePositionTop < this.randomCard + 4
       ) {
         this.elRef.nativeElement.style.cssText = `
-      top: ${this.randomCard}px;
-      filter: blur(0px);
-        filter: grayscale(0);
-    
-    `;
+          
+            opacity: 0;
+                //  top: ${this.randomCard}px;
 
+        `;
+        this.elRef.nativeElement.nextSibling.style.cssText = `
+          
+            // opacity: 0;
+                 top: ${this.randomCard}px;
+
+        `;
         clearInterval(this.shufleInterval);
         clearInterval(this.checkPosition);
-        requestAnimationFrame(this.stopShuffle);
         console.log('stop');
+        setTimeout(() => {
+          this.subtitleShuffleAgain();
+        }, 1000);
+
+        this.fireBlock = true;
       }
     }, 1);
   }
@@ -105,7 +111,6 @@ export class ShuffleDirective {
   }
 
   startShuffle() {
-    // requestAnimationFrame(this.startShuffle);
     setTimeout(() => {
       this.slowDownInterval = setInterval(() => {
         this.speedShuffle--;
