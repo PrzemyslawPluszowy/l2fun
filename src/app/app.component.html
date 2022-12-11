@@ -3,6 +3,7 @@
   <header class="hus">
     <app-header></app-header>
   </header>
+
   <nav *ngIf="mobile">
     <app-left-menu></app-left-menu>
   </nav>
@@ -11,7 +12,9 @@
     <router-outlet></router-outlet>
   </main>
 
-
+  <nav class="mobile-menu" *ngIf="!mobile">
+    <app-menu-mobile></app-menu-mobile>
+  </nav>
 
 
 

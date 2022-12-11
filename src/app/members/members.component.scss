@@ -20,7 +20,7 @@ img {
   width: 100%;
 }
 h1 {
-  font-size: 50px;
+  font-size: 40px;
 }
 .members {
   font-size: 40px;
@@ -45,5 +45,38 @@ h1 {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .members {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    span {
+      text-align: center;
+    }
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .imgWrap {
+    width: 80%;
+  }
+}
+@media all and (min-width: 2000px) {
+  .members {
+    font-size: 25px;
+    display: flex;
+
+    flex-wrap: wrap;
+    transition: 0.5s;
+  }
+
+  .members-single {
+    width: 33%;
+    text-align: center;
+    transition: 0.5s;
   }
 }
