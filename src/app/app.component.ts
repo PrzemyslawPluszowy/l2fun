@@ -35,7 +35,9 @@ export class AppComponent {
     let width = window.innerWidth;
     this.mobile = width > 1100;
   }
-  ngOnInit() {}
+  ngOnInit() {
+    this.onResize();
+  }
   getUrl() {
     return "url('../assets/img/bg/lol.jpg')";
   }
