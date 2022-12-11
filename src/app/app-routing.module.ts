@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { MembersComponent } from './members/members.component';
+import { PageNotfoundComponentComponent } from './page-notfound-component/page-notfound-component.component';
 import { SpotComponent } from './spot/spot.component';
 import { TodayGameComponent } from './today-game/today-game.component';
 
@@ -13,11 +14,11 @@ const routes: Routes = [
   { path: 'members', component: MembersComponent },
   { path: 'info', component: SpotComponent },
   { path: 'TodayGame', component: TodayGameComponent },
-  { path: '**', component: MainComponent },
+  { path: '**', component: PageNotfoundComponentComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
 
   exports: [RouterModule],
 })

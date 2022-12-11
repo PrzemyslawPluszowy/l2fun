@@ -18,6 +18,7 @@ import { TodayGameComponent } from './today-game/today-game.component';
 import { ShuffleDirective } from './directive/shuffle.directive';
 import { TypeWritingDirective } from './directive/type-writing.directive';
 import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
+import { PageNotfoundComponentComponent } from './page-notfound-component/page-notfound-component.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
     ShuffleDirective,
     TypeWritingDirective,
     MenuMobileComponent,
+    PageNotfoundComponentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
