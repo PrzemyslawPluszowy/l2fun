@@ -1,7 +1,7 @@
 <div class="wrapper" appBg>
 
   <header class="hus">
-    <app-header></app-header>
+    <app-header [@enterTrigger]="'fadeIn'"></app-header>
   </header>
 
   <nav *ngIf="mobile">
@@ -9,7 +9,7 @@
   </nav>
 
   <main>
-    <router-outlet></router-outlet>
+    <router-outlet [@enterTrigger]="'fadeIn'"></router-outlet>
   </main>
 
   <nav class="mobile-menu" *ngIf="!mobile">

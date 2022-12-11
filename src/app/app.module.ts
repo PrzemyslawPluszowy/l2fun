@@ -10,7 +10,6 @@ import { MainComponent } from './main/main.component';
 import { BoxComponent } from './main/box/box.component';
 import { BoxDirectiveDirective } from './directive/box-directive.directive';
 import { BoxInsideAnimationDirective } from './directive/box-inside-animation.directive';
-import { BoxServicesService } from './main/box/services/box-services.service';
 import { BgDirective } from './directive/bg.directive';
 import { LiMenuDirective } from './directive/li-menu.directive';
 import { MembersComponent } from './members/members.component';
