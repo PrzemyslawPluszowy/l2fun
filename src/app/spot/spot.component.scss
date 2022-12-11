@@ -24,3 +24,18 @@
     }
   }
 }
+
+@media all and (max-width: 1100px) {
+  .box {
+    justify-content: center;
+    align-items: center;
+    .box--info {
+      text-align: center;
+
+      font-size: 20px;
+      h1 {
+        font-size: 25px;
+      }
+    }
+  }
+}

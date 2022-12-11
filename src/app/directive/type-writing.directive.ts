@@ -16,6 +16,7 @@ export class TypeWritingDirective {
     'Misiek',
     'Kitchila',
     'Enespo',
+    'Pepele',
     'Ania',
     'Katharsis',
     'Hasoll',

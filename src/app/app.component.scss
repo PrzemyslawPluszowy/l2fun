@@ -25,7 +25,7 @@
   }
 
   main {
-    overflow: hidden;
+    overflow: auto;
     z-index: 2;
     width: 70%;
     height: 100%;
@@ -75,17 +75,15 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    overflow: auto;
     min-height: 100vh;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
 
     main {
-      overflow: hidden;
+      // overflow: hidden;
       z-index: 2;
-      height: 100%;
       width: 100%;
-      // overflow-y: auto;
+      overflow-y: auto;
     }
     .hus {
       z-index: 20;

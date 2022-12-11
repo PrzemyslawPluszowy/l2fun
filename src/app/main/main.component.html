@@ -1,29 +1,31 @@
-<div class="wrap">
+<div class="scroll">
+    <div class="wrap">
 
-    <app-box [@enterTrigger]="'fadeIn'" *ngFor="let game of boxesGame">
+        <app-box [@enterTrigger]="'fadeIn'" *ngFor="let game of boxesGame">
 
 
-        <div class="box--fullHidden">
-            <div class="box--fullHidden--upper">
-                <img [src]="game.img" alt="haimerdinger">
+            <div class="box--fullHidden">
+                <div class="box--fullHidden--upper">
+                    <img [src]="game.img" alt="haimerdinger">
+                </div>
+
+                <div class="box--fullHidden--bottom">
+                    <h1>{{game.title}}</h1>
+                    <p>{{game.desc}}</p>
+
+                </div>
             </div>
-
-            <div class="box--fullHidden--bottom">
-                <h1>{{game.title}}</h1>
-                <p>{{game.desc}}</p>
-
+            <div show class="box--full">
+                <div class="box--full--ashe" appBoxInsideAnimation>
+                    <img [src]="game.imgOnHover" alt="">
+                </div>
+                <div class="box--full--desc">
+                    <h1>{{game.title}}</h1>
+                    <p>{{game.desc}}</p>
+                </div>
             </div>
-        </div>
-        <div show class="box--full">
-            <div class="box--full--ashe" appBoxInsideAnimation>
-                <img [src]="game.imgOnHover" alt="">
-            </div>
-            <div class="box--full--desc">
-                <h1>{{game.title}}</h1>
-                <p>{{game.desc}}</p>
-            </div>
-        </div>
-    </app-box>
+        </app-box>
 
 
+    </div>
 </div>
