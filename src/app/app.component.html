@@ -1,5 +1,5 @@
-<div class="wrapper" appBg>
-
+<div class="wrapper" appBg [ngStyle]="{'background-image': getUrl()}">
+  <div class="img-Cover"></div>
   <header class="hus">
     <app-header [@enterTrigger]="'fadeIn'"></app-header>
   </header>

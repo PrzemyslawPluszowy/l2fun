@@ -13,7 +13,7 @@ export class BgDirective {
   maxBoxSize: number = 200;
   minBoxSize: number = 50;
   animationDuration: number = 8000;
-  amountBoxTimeGenerate: number = 2000;
+  amountBoxTimeGenerate: number = 1000;
   ///end config
 
   createSquare() {

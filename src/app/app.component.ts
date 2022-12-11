@@ -36,4 +36,9 @@ export class AppComponent {
     this.mobile = width > 1100;
   }
   ngOnInit() {}
+  getUrl() {
+    return "url('../assets/img/bg/lol.jpg')";
+  }
+
+  bg = { link: "background-image: url('../assets/img/bg/lol.jpg') }" };
 }

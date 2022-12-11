@@ -67,7 +67,7 @@ h1 {
 }
 @media all and (min-width: 2000px) {
   .members {
-    font-size: 25px;
+    font-size: 30px;
     display: flex;
 
     flex-wrap: wrap;
@@ -75,7 +75,7 @@ h1 {
   }
 
   .members-single {
-    width: 33%;
+    width: 50%;
     text-align: center;
     transition: 0.5s;
   }
