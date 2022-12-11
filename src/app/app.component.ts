@@ -11,7 +11,7 @@ export class AppComponent {
   @HostListener('window:resize', [])
   onResize() {
     let width = window.innerWidth;
-    this.mobile = width > 1300;
+    this.mobile = width > 1100;
   }
   ngOnInit() {}
 }

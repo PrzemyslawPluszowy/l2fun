@@ -1,16 +1,14 @@
 <div class="wrapper" appBg>
 
-  <header>
+  <header class="hus">
     <app-header></app-header>
   </header>
   <nav *ngIf="mobile">
     <app-left-menu></app-left-menu>
   </nav>
+
   <main>
-
     <router-outlet></router-outlet>
-
-
   </main>
 
 
