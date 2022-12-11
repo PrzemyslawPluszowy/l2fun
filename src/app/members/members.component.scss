@@ -11,10 +11,10 @@
 img {
   border-radius: 25px;
   object-fit: cover;
-  filter: brightness(114%) saturate(125%) drop-shadow(-1px 3px 5px #ffffffa4);
+  -moz-filter: brightness(114%) saturate(125%) drop-shadow(-1px 3px 5px #575757);
   -webkit-filter: brightness(114%) saturate(125%)
     drop-shadow(-1px 3px 5px #ffffff8e);
-  -moz-filter: brightness(114%) saturate(125%) drop-shadow(-1px 3px 5px #575757);
+  filter: brightness(114%) saturate(125%) drop-shadow(-1px 3px 5px #ffffffa4);
 }
 .membersWrap {
   width: 100%;

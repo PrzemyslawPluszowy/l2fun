@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'members', component: MembersComponent },
   { path: 'info', component: SpotComponent },
   { path: 'TodayGame', component: TodayGameComponent },
+  { path: '**', component: MainComponent },
 ];
 
 @NgModule({
