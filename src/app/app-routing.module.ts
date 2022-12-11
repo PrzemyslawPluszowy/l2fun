@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/game', pathMatch: 'full' },
   { path: 'game', component: MainComponent },
   { path: 'members', component: MembersComponent },
-  { path: 'spot', component: SpotComponent },
+  { path: 'info', component: SpotComponent },
   { path: 'TodayGame', component: TodayGameComponent },
 ];
 

@@ -55,14 +55,14 @@ export class MainComponent implements OnInit {
     {
       title: 'Back4Blood',
       desc: 'Back 4 Blood',
-      img: '../../../assets/img/box/bf-purple.jpg',
-      imgOnHover: '../../../assets/img/box/bf.png',
+      img: '../../../assets/img/box/b2b-purple.jpg',
+      imgOnHover: '../../../assets/img/box/b2b.png',
     },
     {
-      title: 'Back4Blood',
-      desc: 'Back 4 Blood',
-      img: '../../../assets/img/box/bf-purple.jpg',
-      imgOnHover: '../../../assets/img/box/bf.png',
+      title: 'Overwatch',
+      desc: 'Overwatch',
+      img: '../../../assets/img/box/over-purple.jpg',
+      imgOnHover: '../../../assets/img/box/over.png',
     },
   ];
 

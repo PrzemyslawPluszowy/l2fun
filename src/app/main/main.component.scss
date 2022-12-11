@@ -1,9 +1,9 @@
 .wrap {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 95%;
+  width: 100%;
   height: 80%;
 
   .box--full {
@@ -130,7 +130,7 @@ p {
     display: flex;
     // height: 100vh;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
